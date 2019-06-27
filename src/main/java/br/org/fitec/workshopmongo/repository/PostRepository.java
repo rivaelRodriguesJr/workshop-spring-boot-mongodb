@@ -3,12 +3,11 @@ package br.org.fitec.workshopmongo.repository;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
-import br.org.fitec.workshopmongo.domain.User;
+import br.org.fitec.workshopmongo.domain.Post;
 
 //Camada de acesso a dados(Repository)
 @Repository//Definição do reposório de buscas no banco de dados
 // MongoRepository<T, ID> => Subinteface específica da inteface Repository para consulta em bancos Mongo
-//<Nome da classe, tipo do Id>
-public interface UserRepository extends MongoRepository<User, String>{
+public interface PostRepository extends MongoRepository<Post, String>{
 
 }
