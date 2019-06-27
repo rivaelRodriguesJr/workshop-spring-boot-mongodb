@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import br.org.fitec.workshopmongo.domain.User;
 import br.org.fitec.workshopmongo.repository.UserRepository;
+import br.org.fitec.workshopmongo.services.exception.ObjectNotFoundException;
 
 @Service//Camada de serviço, que será controlada pelo controlador REST, acessando o banco através do repositorio injetado
 public class UserService {
@@ -17,6 +18,10 @@ public class UserService {
 	
 	public List<User> findAll(){
 		return repo.findAll();
+	}
+	
+	public User findById(String id) {
+		return repo.findById(id).orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado"));
 	}
 
 }
