@@ -10,4 +10,5 @@ import br.org.fitec.workshopmongo.domain.User;
 // MongoRepository<T, ID> => Subinteface específica da inteface Repository para consulta em bancos Mongo
 public interface UserRepository extends MongoRepository<User, String>{
 
+
 }
