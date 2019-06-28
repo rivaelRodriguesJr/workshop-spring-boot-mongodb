@@ -11,4 +11,5 @@ import br.org.fitec.workshopmongo.domain.User;
 //<Nome da classe, tipo do Id>
 public interface UserRepository extends MongoRepository<User, String>{
 
+
 }

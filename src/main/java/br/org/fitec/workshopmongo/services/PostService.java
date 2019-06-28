@@ -1,5 +1,7 @@
 package br.org.fitec.workshopmongo.services;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,10 +13,14 @@ import br.org.fitec.workshopmongo.services.exception.ObjectNotFoundException;
 public class PostService {
 	
 	@Autowired
-	private PostRepository repository;
+	private PostRepository repo;
 
 	public Post findById(String id) {		
-		return repository.findById(id).orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado"));									   
+		return repo.findById(id).orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado"));									   
+	}
+	
+	public List<Post> findByTitle(String text) {
+		return repo.findByTitleContainingIgnoreCase(text);
 	}
 	
 }

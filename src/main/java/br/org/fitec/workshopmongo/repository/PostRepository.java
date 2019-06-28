@@ -1,5 +1,7 @@
 package br.org.fitec.workshopmongo.repository;
 
+import java.util.List;
+
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
@@ -10,4 +12,5 @@ import br.org.fitec.workshopmongo.domain.Post;
 // MongoRepository<T, ID> => Subinteface específica da inteface Repository para consulta em bancos Mongo
 public interface PostRepository extends MongoRepository<Post, String>{
 
+	List<Post> findByTitleContainingIgnoreCase(String text);
 }
