@@ -95,6 +95,5 @@ public class User implements Serializable{
 	public String toString() {
 		return "User [id=" + id + ", name=" + name + ", email=" + email + "]";
 	}
-
 	
 }

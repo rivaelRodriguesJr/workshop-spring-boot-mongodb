@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import br.org.fitec.workshopmongo.domain.Post;
 import br.org.fitec.workshopmongo.domain.User;
 import br.org.fitec.workshopmongo.dto.UserDTO;
 import br.org.fitec.workshopmongo.repository.UserRepository;
